@@ -12,10 +12,10 @@ Esempio:
 ```python
 tbot.Method("sendMessage", {'chat_id' : 999, 'text' : "KI 666 TU???"})
 ```
-
-
+ 
+ 
 >  Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface.
-
+ 
 Programmatore: Matteo Alessio Carrara
 Aggiornamenti: [https://github.com/matteoalessiocarrara] (GitHub)
 Email: sw.matteoac@gmail.com
