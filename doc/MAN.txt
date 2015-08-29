@@ -1,0 +1,35 @@
+NAME
+    telegrambot
+
+FILE
+    /Telegram-Bot-APY/src/telegrambot.py
+
+CLASSES
+    Bot
+    
+    class Bot
+     |  Methods defined here:
+     |  
+     |  Method(self, method, params={})
+     |      Collegamento a un metodo delle Telegram Bot Api
+     |      
+     |      Args:
+     |        method:
+     |          Il nome del metodo
+     |        params:
+     |          I parametri (opzionali)
+     |      
+     |      Returns:
+     |        Dizionario ricavato dalla decodifica del return in json
+     |  
+     |  Token(self)
+     |      Restituisce il token di questo bot
+     |  
+     |  TokenValido(self)
+     |  
+     |  __init__(self, token)
+
+DATA
+    turl = 'https://api.telegram.org/bot'
+
+
