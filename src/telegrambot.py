@@ -23,7 +23,6 @@ import requests
 turl = "https://api.telegram.org/bot"
 
 class Bot:
-	__TOKEN_LEN = 41 #costante (?)
 	__tokenValido = False
 	__token = "devil666"
 	
@@ -51,7 +50,7 @@ class Bot:
 
 	def __init__(self, token):
 		self.__token = token
-		self.__tokenValido = self.Method("getMe")['ok'] if len(token) is self.__TOKEN_LEN else False
+		self.__tokenValido = self.Method("getMe")['ok'] if ":" in token else False
 		
 		
 
