@@ -13,7 +13,7 @@ Esempio:
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import telegrambot
+from src import telegrambot
 
 token = "123456789:abcdefghijklmnopqrstuvzfoobarFOOBAR"
 bot = telegrambot.Bot(token)
