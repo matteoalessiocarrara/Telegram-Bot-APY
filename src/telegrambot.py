@@ -24,33 +24,24 @@ turl = "https://api.telegram.org/bot"
 
 class Bot:
 	__tokenValido = False
-	__token = "devil666"
+	__token = None
 	
-	def Method(self, method, params = {}):
-		"""
-		Collegamento a un metodo delle Telegram Bot Api
-		
-		Args:
-		  method:
-		    Il nome del metodo
-		  params:
-		    I parametri (opzionali)
+	def __init__(self, token):
+		self.__token = token
+		# in tutti i token c'è il carattere ":"
+		self.__tokenValido = self.Method("getMe")['ok'] if ":" in token else False
 
-		Returns:
-		  Dizionario ricavato dalla decodifica del return in json
+	def Method(self, method, params={}):
 		"""
-		return requests.get(turl+self.__token+"/"+method, params = params).json()
+		"Collegamento" a un metodo delle Telegram Bot Api
+		Passare in method il nome del metodo, in params gli eventuali parametri
+		Restituisce un dizionario ricavato dalla decodifica del return in json
+		"""
+		return requests.get(turl + self.__token + "/" + method, params = params).json()
 
 	def TokenValido(self):
 		return self.__tokenValido
 	
 	def Token(self):
 		"""Restituisce il token di questo bot"""
-		return self.__token 
-
-	def __init__(self, token):
-		self.__token = token
-		self.__tokenValido = self.Method("getMe")['ok'] if ":" in token else False
-		
-		
-
+		return self.__token

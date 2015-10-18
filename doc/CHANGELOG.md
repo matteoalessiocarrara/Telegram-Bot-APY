@@ -1,3 +1,7 @@
+18/10/2015
+----------
+ - Migliorato codice
+
 30/8/2015
 ---------
  - Risolti alcuni crash con token non validi
