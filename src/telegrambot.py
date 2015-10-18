@@ -22,10 +22,12 @@ import requests
 
 turl = "https://api.telegram.org/bot"
 
+
 class Bot:
+
 	__tokenValido = False
 	__token = None
-	
+
 	def __init__(self, token):
 		self.__token = token
 		# in tutti i token c'è il carattere ":"
@@ -37,11 +39,11 @@ class Bot:
 		Passare in method il nome del metodo, in params gli eventuali parametri
 		Restituisce un dizionario ricavato dalla decodifica del return in json
 		"""
-		return requests.get(turl + self.__token + "/" + method, params = params).json()
+		return requests.get(turl + self.__token + "/" + method, params=params).json()
 
 	def TokenValido(self):
 		return self.__tokenValido
-	
+
 	def Token(self):
 		"""Restituisce il token di questo bot"""
 		return self.__token
